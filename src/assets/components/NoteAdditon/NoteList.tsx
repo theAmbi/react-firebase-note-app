@@ -1,11 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState, useCallback } from 'react'
 import { auth, database } from '../../firebase/firebase.config'
 import { collection, getDocs, deleteDoc } from 'firebase/firestore'
 import 'firebase/firestore'
 import { NoteListStyled } from '../../styles/Notes/NoteList.styled'
-import search from '../../images/search.svg'
-import list from '../../images/list.svg'
-import { AiOutlineEdit, AiOutlineDelete } from 'react-icons/ai'
+import {  AiOutlineSearch } from 'react-icons/ai'
 import { FiMoreVertical } from 'react-icons/fi'
 import { SingleNote } from './SingleNote'
 import { useAuthState } from 'react-firebase-hooks/auth'
@@ -20,18 +18,18 @@ const NoteList = () => {
     const [searchNote, setSearchNote] = useState(false);
 
 const collectionRef = collection(database, `notes/${user?.uid}/mynotes`);
-const fetchNotes = async () => {
+const fetchNotes = useCallback(async () => {
     const response = await getDocs(collectionRef);
     const notes: any = response.docs.map((note) => ({
         id: note.id,
         ...note.data()
     }));
     setMyNotes(notes);
-}
+}, [collectionRef])
 
 useEffect(() => {
     fetchNotes();
-});
+}, [fetchNotes]);
 
     // const storedNotes = localStorage.getItem('notes');
     // console.log(storedNotes);
@@ -45,21 +43,25 @@ useEffect(() => {
             <div id='heading-flex'>
                 <h3>My Notes</h3>
                 <div className='icons-flex'>
-                    <img src={list} className='notelist-list' />
-                    <img src={search} className='notelist-search' onClick={() => setSearchNote(!searchNote)} />
-                    {searchNote && <div id='searchInput'>
+                    {/* <img src={list} className='notelist-list' /> */}
+                  <div className='note-search'>
+                  <input type="text" placeholder='search note...' />
+                <AiOutlineSearch className='notelist-search'/>
+                  </div>
+                    {/* {searchNote && <div id='searchInput'>
                         <input type="text" placeholder='search note...' />
-                    </div>}
+                    </div>} */}
                 </div>
             </div>
             <div>
             </div>
 
             <div className="list">
-                {myNotes.map((note) => {
+                {myNotes.map((note: any) => {
                     return <SingleNote note={note} key={note.id} />
                 })
                 }
+            {!myNotes ? <div>No note found</div> : '' }
 
                 
 

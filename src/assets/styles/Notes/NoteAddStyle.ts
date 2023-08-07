@@ -5,6 +5,7 @@ width: 100%;
 margin: 60px 0;
 background-color: #fff;
 border: 1px solid lightgray;
+position: relative;
 
 .note-add-wrapper{
     width: 100%;

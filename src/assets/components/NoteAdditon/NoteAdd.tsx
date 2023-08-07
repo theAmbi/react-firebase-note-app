@@ -1,10 +1,11 @@
-import React, { useCallback, useState, useEffect } from 'react'
+import React, { useCallback, useState, useEffect, useRef } from 'react'
 import { NoteAddStyle } from '../../styles/Notes/NoteAddStyle'
 import { auth, database } from '../../firebase/firebase.config'
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import cancel from '../../images/exit.svg'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { NoteAddBtn } from '../../styles/NoteAddBtn.styled';
+import Notification from '../Notification';
 
 // const collectionRef = collection(database, "notes");
 
@@ -13,14 +14,18 @@ interface UserData {
     description: string;
 }
 
-const NoteAdd:React.FC = ({onClose}:any) => {
+const NoteAdd:React.FC = ({onClose, onNoteAdded}:any,) => {
     const [user] = useAuthState(auth);
-
-    // const [title, setTitle] = useState("");
-    // const [description, setDescription] = useState("")
+    const [showNotif, setShowNotif] = useState(false)
     const [formData, setFormData] = useState<UserData>({title: '', description: ''});
     const [notes, setNotes]= useState<any[]>([]);
-
+    const titleRef = useRef<HTMLInputElement | null>(null);
+    
+    useEffect(() => {
+        if (titleRef.current){
+            titleRef.current.focus()
+        }
+    }, [])
     
 
 
@@ -47,10 +52,16 @@ const NoteAdd:React.FC = ({onClose}:any) => {
             const newNote = {title: formData.title, description: formData.description};
             setNotes([...notes, newNote]);
             setFormData({title: '', description: ''});
+            // setShowNotif(true);
             console.log(notes);                
             } else {
                 alert('Title and description cannot be empty')
             }
+
+
+            setTimeout(() => {
+               onNoteAdded();
+            }, 3000)
         
             // console.log(user);
             
@@ -73,7 +84,7 @@ const NoteAdd:React.FC = ({onClose}:any) => {
                                 <img src={cancel} />
                             </div>
                             <div className="note-title">
-                                <input type="text" name='note-title' placeholder='Add a New Note' value={formData.title} onChange={handleTitleChange} />
+                                <input type="text" name='note-title' placeholder='Add a New Note' value={formData.title} onChange={handleTitleChange} ref={titleRef}/>
                             </div>
 
                             {/* note description */}
@@ -83,11 +94,13 @@ const NoteAdd:React.FC = ({onClose}:any) => {
 
                             {/* note button  */}
 
-                            <NoteAddBtn bg={"#D8315B"} color={"#FFFAFF"} onClick={addNote} >Add note</NoteAddBtn>
+                            <NoteAddBtn bg={"#D8315B"} color={"#FFFAFF"} onClick={addNote}>Add note</NoteAddBtn>
+                            
                         </div>
                     </div>
-
                 </NoteAddStyle >
+                {/* {showNotif && <Notification text='note added successfully!'/> } */}
+
             </>
         )
     }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import '../colours/colours.css'
 
 export const NoteListStyled = styled.section`
 margin: 50px 0;
@@ -7,7 +8,7 @@ margin: 50px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 35px 0;
+    padding: 25px 0;
     border-bottom: 1px solid #AFC8EA;
     border-top: 1px solid #AFC8EA;
 }
@@ -21,27 +22,28 @@ h3{
     display: flex;
     align-items: center;
     gap: 25px;
-
-    .notelist-list, .notelist-search{
-        width: 30px;
-        cursor: pointer;
-    }
 }
 
 .list{
-    width: 100%;
+    width: 98%;
     display: flex;
     flex-direction: column;
     gap: 4px;
     background-color: #fff;
-    border: 1px solid lightgray;
+    /* border: 1px solid lightgray; */
+    border-radius: 9px;
     margin-top: 30px;
     padding: 30px 12px;
 
 }
 
+#timestamp{
+    color: var(--grayishBlue);
+    margin-bottom: 16px;
+}
+
 .notelist-title{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin: 10px 0;
 }
 
@@ -70,6 +72,63 @@ h3{
     cursor: pointer;
     padding: 8px;
     height: fit-content;
+}
+
+.note-edit-icons{
+    font-size: 1.4rem;
+    display: flex;
+    gap: 20px;
+
+    .delete{
+        color: var(--errorRed);
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 4px;
+
+        &:hover{
+            background-color: var(--errorRed);
+            color: var(--white);
+        }
+    }
+
+    .edit{
+        color: var(--grayishBlue);
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 4px;
+
+        &:hover{
+            background-color: var(--gray);
+        }
+    }
+
+}
+
+.note-search{
+    padding: 23px 20px;
+    background-color: var(--white);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    input{
+        outline: none;
+        border: none;
+        padding-left: 1px;
+
+        ::placeholder{
+            color: var(--grayishBlue);
+        }
+    }
+
+
+    .notelist-search{
+        font-size: 1.4rem;
+        cursor: pointer;
+        color: var(--grayishBlue);
+    }
+
 }
 .note{
     background-color: #fff;
@@ -105,14 +164,6 @@ h3{
             padding: 3px 6px;
             color: #fff;
             font-size: 1.5rem;
-        }
-
-        #delete{
-            background-color: #D8315B;
-        }
-
-        #edit{
-            background-color: #577399;
         }
     }
 }

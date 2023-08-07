@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const DashboardBannerStyled = styled.div`
 width: 100%;
-max-width: 96%;
+/* max-width: 96%; */
 height: 370px;
 background-color: #001524;
 padding-left: 70px;
@@ -10,6 +10,7 @@ display: flex;
 flex-direction: column;
 margin-top: 30px;
 position: relative;
+/* border-radius: 16px; */
 /* align-items: center; */
 
 h2{

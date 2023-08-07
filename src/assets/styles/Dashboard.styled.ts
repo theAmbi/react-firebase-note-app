@@ -6,6 +6,7 @@ export const DashboardStyled = styled.section`
   min-height: 100vh;
   background-color: var(--gray);
   padding: 20px 0;
+  position: relative;
 
   #signout {
     padding: 20px 32px;

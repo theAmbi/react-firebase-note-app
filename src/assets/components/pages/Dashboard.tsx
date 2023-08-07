@@ -9,41 +9,43 @@ import { DashboardBtn } from '../../styles/DashboardBtn.styled'
 import { signOut } from 'firebase/auth'
 import NoteList from '../NoteAdditon/NoteList'
 import NoteAdd from '../NoteAdditon/NoteAdd'
+import Preloader from '../Loader'
+import Notification from '../Notification';
+
 
 // dark mode context 
 // import { DarkModeProvider } from '../../../context/DarkModeContext'
 
 const Dashboard = () => {
 
-    const [user] = useAuthState(auth);
+    const [user, loading] = useAuthState(auth);
     const [openModal, setOpenModal] = useState(false)
+    const [showNoteAddedNotif, setShowNoteAddedNotif] = useState(false);
 
     const navigate = useNavigate();
-    // console.log(user);
-    
-    // const newUserName = username.split(" ");
-    // const firstName = newUserName[0];
-
 
     const signUserOut = () => {
         signOut(auth);
     };
 
-    const toggleModal = () => {
-        if (openModal) {
-            setOpenModal((prev) => !prev)
-        }
-        else (
-            openModal
-        )
-    };
+    const handleNoteAdded = () => {
+        setShowNoteAddedNotif(true);
+        
+        useEffect(() => {
+            setTimeout(() => {
+                setShowNoteAddedNotif(false);
+            }, 3000);
+        }, [])
+    }
 
     // check for user and reroute to login
     useEffect(() => {
-        if (!user) {
+        if (!loading && !user) {
             navigate("/login");
         }
-    })
+    },[user, loading])
+
+    {loading ? <Preloader/> : ''}
 
     const username = user?.displayName.split(" ")[0];
 
@@ -60,7 +62,8 @@ const Dashboard = () => {
                     </div>
                 </DashboardBannerStyled>
 
-                {openModal && <NoteAdd onClose={() => setOpenModal(false)} />}
+                {openModal && <NoteAdd onClose={() => setOpenModal(false)} onNoteAdded={handleNoteAdded}/>}
+                {showNoteAddedNotif && <Notification text='note added successfully'/>}
                 <NoteList />
                 <button onClick={signUserOut} id='signout'>Sign Out</button>
 
