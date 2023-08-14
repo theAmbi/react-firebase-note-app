@@ -90,6 +90,12 @@ border-top-right-radius: 12px;
     }
 }
 
+.ql-editor {
+  color: #577399;
+  height: 200px;
+  font-size: 1.3rem;
+}
+
 /* .background{
      width: 100%;
     background-color: rgba(0, 21, 36, .4);

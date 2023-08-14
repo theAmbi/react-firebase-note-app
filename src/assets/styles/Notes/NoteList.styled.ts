@@ -35,6 +35,7 @@ h3{
     margin-top: 30px;
     padding: 30px 12px;
 
+
 }
 
 #timestamp{
@@ -104,6 +105,26 @@ h3{
 
 }
 
+.note-error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--grayishBlue);
+
+    & > p{
+        max-width: 350px;
+    }
+
+    #errorIcon{
+        font-size: 4.7rem;
+        text-align: center;
+    }
+}
+
 .note-search{
     padding: 23px 20px;
     background-color: var(--white);
@@ -111,6 +132,10 @@ h3{
     display: flex;
     align-items: center;
     gap: 15px;
+
+    &:focus{
+            border: 2px solid var(--grayishBlue)
+        }
 
     input{
         outline: none;
@@ -120,6 +145,8 @@ h3{
         ::placeholder{
             color: var(--grayishBlue);
         }
+
+        
     }
 
 
@@ -134,7 +161,7 @@ h3{
     background-color: #fff;
     border-bottom: 1px solid #f6f7fb;
     margin: 7px 0px;
-    width: 94%;
+    width: 97%;
     padding: 6px 14px;
     position: relative;
     display: flex;
@@ -166,5 +193,22 @@ h3{
             font-size: 1.5rem;
         }
     }
+}
+
+#modal-overlay{
+    width: 100%;
+    height: 100vh !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(4px);
+    /* margin: 0 auto; */
+    height: fit-content;
+    padding: 20px 7px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 `

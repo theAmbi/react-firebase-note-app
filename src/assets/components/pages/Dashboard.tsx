@@ -10,11 +10,14 @@ import { signOut } from 'firebase/auth'
 import NoteList from '../NoteAdditon/NoteList'
 import NoteAdd from '../NoteAdditon/NoteAdd'
 import Preloader from '../Loader'
-import Notification from '../Notification';
 
 
 // dark mode context 
 // import { DarkModeProvider } from '../../../context/DarkModeContext'
+
+interface User {
+
+}
 
 const Dashboard = () => {
 
@@ -43,11 +46,12 @@ const Dashboard = () => {
         if (!loading && !user) {
             navigate("/login");
         }
+        {loading ? <Preloader/> : ''}
     },[user, loading])
 
-    {loading ? <Preloader/> : ''}
+   
 
-    const username = user?.displayName.split(" ")[0];
+    const username = user?.displayName?.split(" ")[0];
 
     return (
         <DashboardStyled>

@@ -4,23 +4,26 @@ import { FiMoreVertical } from 'react-icons/fi'
 import { doc, deleteDoc, collection } from 'firebase/firestore'
 import { auth, database } from '../../firebase/firebase.config'
 import { useAuthState } from 'react-firebase-hooks/auth'
+import NoteModal from './NoteModal'
+import {toast} from 'react-toastify'
 
 
 interface NoteProps {
-    note: {
-        title: string;
-        id: string;
-        timestamp: any;
-    }
+    note: Note;
+    // note: {
+    //     title: string;
+    //     id: string;
+    //     timestamp: any;
+    // }
 }
 
 export const SingleNote: React.FC<NoteProps> = ({ note }) => {
-    // const [hover, setHover] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
     const [user] = useAuthState(auth);
 
     const collectionRef = collection(database, `notes/${user?.uid}/mynotes`);
 
-    let maxLength = 30;
+    let maxLength = 35;
     {
         if ((note.title.length) > maxLength) {
             note.title = note.title.substring(0, maxLength) + "...";
@@ -28,7 +31,16 @@ export const SingleNote: React.FC<NoteProps> = ({ note }) => {
     }
 
     const deleteNote = async (documentId :string) => {
-      await deleteDoc(doc(collectionRef, documentId))
+      await deleteDoc(doc(collectionRef, documentId));
+      toast.success("Note deleted successfully!");
+    };
+
+    const handleEditClick = () => {
+        setModalOpen(true);
+    };
+
+    const handleModal = () => {
+        setModalOpen(false);
     }
 
     return (
@@ -42,7 +54,10 @@ export const SingleNote: React.FC<NoteProps> = ({ note }) => {
                     {/* <p className='notelist-description'>{note.description}</p> */}
                 </div>
                 <div className='note-edit-icons'>
-                    <AiOutlineEdit className='edit' title='edit'/>
+                    <AiOutlineEdit className='edit' title='edit'onClick={handleEditClick}/>
+                    {modalOpen && <div id='modal-overlay'>
+                        <NoteModal note={note} onClose={handleModal}/>
+                    </div>}
                     <AiOutlineDelete className='delete' title='delete' onClick={() => deleteNote(note.id).then(() => {
                         console.log('document deleted successfully');
 

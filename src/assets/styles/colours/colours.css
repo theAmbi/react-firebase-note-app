@@ -1,10 +1,12 @@
 :root{
     --offWhiteBG: #fffaff;
     --darkBlue: #001524;
+    --darkBlueHover: #01233B;
     --grayishBlue: #577399;
     --white: #fff;
     --mainRed: #d8315b;
     --errorRed: #ff0000;
     --gray: #f6f7fb;
+    --grayHover: #EEEFF4;
     
 }

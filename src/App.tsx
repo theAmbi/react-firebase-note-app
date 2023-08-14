@@ -7,6 +7,8 @@ import Docs from "./assets/components/pages/Docs";
 import Contact from "./assets/components/pages/Contact";
 import NotFound from "./assets/components/pages/NotFound";
 import Login from "./assets/components/pages/Login";
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -14,6 +16,7 @@ function App() {
 
   return (
     <div>
+      <ToastContainer/>
       <Navbar />
       <Routes>
         <Route index path='/' element={<Home />} />
@@ -23,6 +26,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+  
     </div>
   )
 }

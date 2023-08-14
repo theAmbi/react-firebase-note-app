@@ -7,7 +7,7 @@ padding: 0px 10px;
 margin: 0 auto;
 overflow: hidden;
 /* background-color: yellow; */
-border: 1px solid red;
+/* border: 1px solid red; */
 
 @media screen and (max-width: 480px){
     max-width: 90%;
