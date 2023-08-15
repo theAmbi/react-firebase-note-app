@@ -26,7 +26,7 @@ const Login:React.FC = () => {
 
     const handleGoogleSubmit = async () => {
         try {
-            const result: UserCredential = await signInWithRedirect(auth, googleProvider);
+            const result: UserCredential = await signInWithPopup(auth, googleProvider);
             console.log(result.user);
             navigateToDashboard();
         } catch (err) {

@@ -30,4 +30,21 @@ p{
     text-align: left;
     line-height: 27px;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    padding-left: 20px;
+    height: fit-content;
+    padding-bottom: 30px;
+    width: 100%;
+
+    h2{
+        font-size: 2rem;
+        padding-top: 4rem;
+    }
+
+    p{
+        font-size: 1.3rem;
+        margin-top: 15px;
+    }
+}
 `

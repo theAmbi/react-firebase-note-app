@@ -91,6 +91,8 @@ align-self: flex-start;
     .logo img{
         width: 100px;
     }
+
+    
 }
 
 

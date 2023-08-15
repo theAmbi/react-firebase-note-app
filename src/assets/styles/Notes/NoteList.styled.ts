@@ -114,6 +114,7 @@ h3{
     margin: 0 auto;
     text-align: center;
     color: var(--grayishBlue);
+    margin: 80px 0px;
 
     & > p{
         max-width: 350px;
@@ -195,6 +196,10 @@ h3{
     }
 }
 
+.note:last-child{
+    border-bottom: none;
+}
+
 #modal-overlay{
     width: 100%;
     height: 100vh !important;
@@ -210,5 +215,38 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+    #heading-flex{
+        padding: 20px 10px;
+        h3{
+            font-size: 1.3rem;
+        }
+    }
+
+    .note-search{
+        padding: 20px 14px;
+
+        input{
+            max-width: 150px;
+        }
+    }
+
+    .note {
+        .note-heading h3{
+            font-size: 1rem;
+        }
+
+        p{
+            font-size: .8rem;
+        }
+
+        .note-edit-icons{
+            gap: 14px;
+            justify-content: flex-end;
+        }
+    }
 }
 `

@@ -25,7 +25,6 @@ const Navbar: React.FC<ImageProps> = ({src, alt}) => {
     const [toggle, setToggle] = useState(false);
     // const [scrolled, setScrolled] = useState(false)
     const [userOptions, showUserOptions] = useState(false);
-    // const [isDarkMode, toggleDarkMode] = useDarkModeContext();
 
 
 
@@ -53,7 +52,7 @@ const Navbar: React.FC<ImageProps> = ({src, alt}) => {
                             <NavLink to="/docs" className={"mobileHide"}><li>Docs</li></NavLink>
                             <NavLink to="/contact" className={"mobileHide"}><li>Contact</li></NavLink>
                             <div className='user-btn-hamburger' onClick={() => showUserOptions}>
-                                {!user && <NavLink to="/login">
+                                {!user && <NavLink to="/login" className={"mobileHide"}>
                                     <Signin />
                                 </NavLink>}
 
@@ -75,11 +74,14 @@ const Navbar: React.FC<ImageProps> = ({src, alt}) => {
                     </NavContainer>
                 </NavbarStyle>
                 {toggle && <MobileMenu id='mobile-menu'>
-                    <div className='mobile-menu-container'>
+                    {/* <div className='mobile-menu-container'> */}
                         <NavLink to={'/'}>Home</NavLink>
                         <NavLink to={'/docs'}>Docs</NavLink>
                         <NavLink to={'/contact'}>Contact</NavLink>
-                    </div>
+                        {!user && <NavLink to="/login" id='login'>
+                                    <Signin />
+                                </NavLink>}
+                    {/* </div> */}
                 </MobileMenu>}
 
             </OuterNavContainer>

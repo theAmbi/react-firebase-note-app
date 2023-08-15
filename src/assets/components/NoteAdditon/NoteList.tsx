@@ -1,13 +1,19 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import { auth, database } from '../../firebase/firebase.config'
 import { collection, getDocs, deleteDoc } from 'firebase/firestore'
 import 'firebase/firestore'
 import { NoteListStyled } from '../../styles/Notes/NoteList.styled'
 import {  AiOutlineSearch } from 'react-icons/ai'
-import { FiMoreVertical } from 'react-icons/fi'
 import {TbFaceIdError} from 'react-icons/tb'
 import { SingleNote } from './SingleNote'
 import { useAuthState } from 'react-firebase-hooks/auth';
+
+type Note = {
+    id: string;
+    title: string;
+    description: string;
+    timestamp: Firebase.firestore.Timestamp;
+}
 
 const NoteList = () => {
     const [user] = useAuthState(auth);
@@ -40,7 +46,8 @@ useEffect(() => {
 }, [fetchNotes]);
 
 
-
+const sortedNotes = [...myNotes].sort((a:Note, b:Note) => b.timestamp.toMillis() - a.timestamp.toMillis()
+);
 
     return (
         <NoteListStyled>
@@ -57,8 +64,8 @@ useEffect(() => {
             </div>
 
             <div className="list">
-                {myNotes.length > 0 ? 
-                    myNotes.map((note: any) => {
+                {sortedNotes.length > 0 ? 
+                    sortedNotes.map((note: any) => {
                     return <SingleNote note={note} key={note.id} />
                 })   
              : (<div className='note-error'><TbFaceIdError id='errorIcon'/> <p>Oops, looks like we couldn't find your note.</p></div>)}

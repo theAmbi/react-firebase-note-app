@@ -28,7 +28,7 @@ p{
 }
 
 
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
     h2{
         padding-top: 0;
         font-size: 2.7rem;
@@ -41,7 +41,7 @@ p{
         text-align: left;
         padding-top: 40px;
         padding-bottom: 20px;
-        margin: auto;
+        /* margin: auto; */
     }
 }
 `

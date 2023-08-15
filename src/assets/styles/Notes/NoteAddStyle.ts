@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import '../colours/colours.css'
 
 export const NoteAddStyle = styled.div`
 width: 100%;
@@ -19,10 +20,11 @@ position: relative;
 
     .cancel{
         padding: 10px;
-        background-color: #D8315B;
+        background-color: var(--darkBlue);
         position: absolute;
         top: 0;
         right: 0;
+        border-bottom-left-radius: 30px;
         /* border-top-right-radius: 12px; */
         cursor: pointer;
     }
@@ -41,13 +43,13 @@ width: 100%;
     border: none;
     padding: 12px 10px;
     font-size: 2rem;
-    outline: none;
+    outline: none !important;
     font-weight: 600;
     color: #D8317B;
     margin: 20px 0;
-border-top-left-radius: 12px;
-border-top-right-radius: 12px;
-    background: #f6f7fb;
+/* border-top-left-radius: 12px;
+border-top-right-radius: 12px; */
+    background: transparent;
     /* background: yellow; */
     /* opacity: .5; */
 
@@ -105,4 +107,23 @@ border-top-right-radius: 12px;
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
     } */
+
+    @media only screen and (min-width: 320px) and (max-width: 480px){
+        width: 100%;
+        margin: 30px 0;
+        /* border: 1px solid red !important; */
+        /* overflow: hidden; */
+
+        .note-add-wrapper{
+            width: 90%;
+        }
+
+        .note-title input{
+            max-width: 90%;
+        }
+
+        .note-container{
+            padding: 15px 20px;
+        }
+    }
 `

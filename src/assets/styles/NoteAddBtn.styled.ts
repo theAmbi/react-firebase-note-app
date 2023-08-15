@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const NoteAddBtn = styled.button`
 width: fit-content;
 margin: auto;
-padding: 20px 62px;
+padding: 20px 32px;
 background: ${({bg}) => bg };
 color: ${(color)=> color};
 font-weight: 600;
@@ -18,8 +18,8 @@ border: none;
 margin-top: 40px;
 
 
-@media screen and (max-width: 480px){
-    font-size: 1rem;
+@media screen and (min-width: 320px) and (max-width: 480px){
+    font-size: 0.9rem;
 }
 
 `

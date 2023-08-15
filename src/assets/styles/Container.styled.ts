@@ -9,9 +9,10 @@ overflow: hidden;
 /* background-color: yellow; */
 /* border: 1px solid red; */
 
-@media screen and (max-width: 480px){
-    max-width: 90%;
+@media screen and (min-width: 320px) and (max-width: 480px){
+    max-width: 95%;
     margin: auto;
+    overflow: hidden;
     /* background-color: skyblue; */
 }
 `

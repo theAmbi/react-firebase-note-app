@@ -1,12 +1,14 @@
 import styled from "styled-components";
+import '../styles/colours/colours.css'
 
 export const HeroStyled = styled.section`
 width: 100%;
-height: 50vh;
+min-height: 50vh;
 padding-top: 30px;
 padding-bottom: 100px;
-background-color: #FFF;
+background-color: var(--white);
 position: relative;
+padding-bottom: 180px;
 
 h2{
     color: #001524;
@@ -18,7 +20,7 @@ h2{
 }
 
 p{
-    margin: 25px 0;
+    margin: 35px 0;
     font-size: 1.1rem;
     color: #577399;
     max-width: 480px;
@@ -27,10 +29,8 @@ p{
 
 svg{
     position: absolute;
-    /* bottom: -50%; */
     bottom: 50;
     left: 0;
-    /* margin-top: 40px; */
 
 }
 
@@ -47,7 +47,8 @@ img{
 }
 
 
-@media screen and (max-width: 320px), (max-width: 480px){
+@media screen and (min-width: 320px) and (max-width: 480px){
+    padding-bottom: 50px;
     h2{
         padding-top: 0;
         font-size: 2.7rem;
@@ -59,9 +60,8 @@ img{
         max-width: 280px;
         text-align: left;
         /* padding: 40px 0; */
-        padding-top: 40px;
-        padding-bottom: 20px;
-        margin: 0 auto;
+        padding: 20px 0;
+        /* margin: 0 auto; */
     }
 
     img{

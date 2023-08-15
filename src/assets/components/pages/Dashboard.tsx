@@ -67,7 +67,6 @@ const Dashboard = () => {
                 </DashboardBannerStyled>
 
                 {openModal && <NoteAdd onClose={() => setOpenModal(false)} onNoteAdded={handleNoteAdded}/>}
-                {showNoteAddedNotif && <Notification text='note added successfully'/>}
                 <NoteList />
                 <button onClick={signUserOut} id='signout'>Sign Out</button>
 
