@@ -218,6 +218,9 @@ h3{
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
+    width: 100%;
+    /* border: 1px solid red; */
+    overflow: hidden;
 
     #heading-flex{
         padding: 20px 10px;
@@ -227,14 +230,26 @@ h3{
     }
 
     .note-search{
-        padding: 20px 14px;
+        padding: 20px 9px;
 
         input{
             max-width: 150px;
         }
+
+        .notelist-search{
+        order: 0;
+    }
     }
 
+   
+
     .note {
+        width: 90%;
+        /* background-color: yellow; */
+
+        .note-details-flex{
+            justify-content: space-between;
+        }
         .note-heading h3{
             font-size: 1rem;
         }
@@ -244,9 +259,14 @@ h3{
         }
 
         .note-edit-icons{
-            gap: 14px;
+            gap: 10px;
             justify-content: flex-end;
         }
+    }
+
+    .list{
+        width: 96%;
+        padding: 30px 8px;
     }
 }
 `
