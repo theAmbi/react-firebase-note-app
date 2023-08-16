@@ -10,7 +10,7 @@ overflow: hidden;
 /* border: 1px solid red; */
 
 @media screen and (min-width: 320px) and (max-width: 480px){
-    max-width: 95%;
+    max-width: 94%;
     margin: auto;
     overflow: hidden;
     /* background-color: skyblue; */
