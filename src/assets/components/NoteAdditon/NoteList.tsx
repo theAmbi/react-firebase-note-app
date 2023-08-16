@@ -46,8 +46,11 @@ useEffect(() => {
 }, [fetchNotes]);
 
 
-const sortedNotes = [...myNotes].sort((a:Note, b:Note) => b.timestamp.toMillis() - a.timestamp.toMillis()
-);
+const sortedNotes = [...myNotes].sort((a:Note, b:Note) => {
+    const aTimestamp = a.timestamp?.toMillis() || 0;
+    const bTimestamp = b.timestamp?.toMillis() || 0;
+    bTimestamp - aTimestamp;
+});
 
     return (
         <NoteListStyled>

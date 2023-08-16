@@ -21,6 +21,8 @@ align-self: flex-start;
 
 
 
+
+
 #user-img{
     width: 40px !important;
     height: 40px;
@@ -78,7 +80,8 @@ align-self: flex-start;
 
 
 
-@media only screen and (max-width: 480px) {
+
+@media only screen (min-width: 320px) and (max-width: 480px) {
     width: 100%;
     /* flex-direction: column;
     justify-content: start; */
@@ -88,18 +91,34 @@ align-self: flex-start;
         display: none;
     }
 
-    .logo img{
-        width: 100px;
+    .navlink{
+        display: none !important;
+        border: 1px solid red;
+    }
+
+    #user-img{
+        width: 30px !important;
+        height: 30px !important;
     }
 
     
 }
 
 
-@media only screen and (min-width: 1000px){
+
+@media screen and (min-width: 481px) and (max-width: 1000px) {
     .hamburger{
-        display: none;
+        display: block;
     }
+
+    .navlink{
+        display: none;
+        border: 1px solid yellow;
+    }
+
+   
+
+    
 }
 
 

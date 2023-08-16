@@ -269,4 +269,11 @@ h3{
         padding: 30px 8px;
     }
 }
+
+@media only screen and (min-width: 481px) and (max-width: 1000px) {
+    .list{
+        width: 97%;
+        padding: 30px 20px;
+    }
+}
 `

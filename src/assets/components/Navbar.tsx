@@ -4,7 +4,7 @@ import { NavContainer } from '../styles/NavContainer.styled'
 import { OuterNavContainer } from '../styles/OuterNavContainer.styled'
 import { MobileMenu } from '../styles/MobileMenu.styled'
 import { Link, NavLink } from 'react-router-dom'
-import logo from "../images/notify.svg"
+import logo from "../images/logo.png"
 import Signin from './Signin'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth } from '../firebase/firebase.config'

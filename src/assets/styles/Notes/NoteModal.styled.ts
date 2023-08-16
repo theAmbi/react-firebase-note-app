@@ -24,9 +24,10 @@ gap: 25px;
     input {
     width: 45%;
     padding: 25px 16px;
-    border: 2px solid var(--white);
+    border: 2px solid transparent;
+  
     outline: none;
-    background-color: var(--gray);
+    /* background-color: var(--gray); */
     border-radius: 9px;
     font-size: 1.3rem;
     color: var(--mainRed);
@@ -43,7 +44,7 @@ gap: 25px;
     }
 }
 
-textarea{
+/* textarea{
     width: 60%;
     min-height: 250px;
     padding: 32px 16px;
@@ -60,6 +61,12 @@ textarea{
         background-color: transparent;
         border-radius: 0px;
     }
+} */
+
+.ql-editor {
+  color: #577399;
+  height: 200px;
+  font-size: 1.3rem;
 }
 
 #btn button{
@@ -92,5 +99,25 @@ textarea{
         background-color: var(--grayHover);
     }
 }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    width: 70%;
+    padding: 32px 30px;
+
+    #inputs{
+        input{
+            width: 90%;
+        }
+    }
+
+    #btn{
+        flex-direction: row;
+button{
+    padding: 18px 20px;
+    font-size: 0.8rem !important;
+
+}
+    }
 }
 `

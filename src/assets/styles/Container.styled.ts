@@ -15,4 +15,8 @@ overflow: hidden;
     overflow: hidden;
     /* background-color: skyblue; */
 }
+
+@media screen and (min-width: 481px) and (max-width: 1000px){
+    max-width: 90%;
+}
 `

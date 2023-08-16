@@ -47,4 +47,14 @@ p{
         margin-top: 15px;
     }
 }
+
+@media screen and (min-width: 481px) and (max-width: 1000px){
+
+    h2{
+        font-size: 3rem;
+    }
+    p{
+        font-size: 1.4rem;
+    }
+}
 `
