@@ -27,10 +27,10 @@ const Login:React.FC = () => {
     const handleGoogleSubmit = async () => {
         try {
             const result: UserCredential = await signInWithPopup(auth, googleProvider);
-            console.log(result.user);
+            // console.log(result.user);
             navigateToDashboard();
         } catch (err) {
-            console.log("error is" + err);
+            console.error("error is" + err);
         }
     }
 
