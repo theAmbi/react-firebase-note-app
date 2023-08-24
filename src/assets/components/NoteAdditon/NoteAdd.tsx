@@ -102,11 +102,10 @@ setFormData({...formData, description: html});
             }
 
 
-            setTimeout(() => {
-               onNoteAdded();
-            }, 2000)
+            // setTimeout(() => {
+            //    onNoteAdded();
+            // }, 2000)
         
-            // console.log(user);
             
           }, [formData.title, editorHtml, notes]);
 

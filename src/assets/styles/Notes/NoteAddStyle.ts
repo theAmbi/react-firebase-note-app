@@ -108,7 +108,7 @@ border-top-right-radius: 12px; */
     -webkit-backdrop-filter: blur(7px);
     } */
 
-    @media only screen and (min-width: 320px) and (max-width: 480px){
+    @media only screen and (max-width: 480px){
         width: 100%;
         margin: 30px 0;
         /* border: 1px solid red !important; */
@@ -120,6 +120,7 @@ border-top-right-radius: 12px; */
 
         .note-title input{
             max-width: 90%;
+            font-size: 1.2rem;
         }
 
         .note-container{
