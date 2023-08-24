@@ -43,15 +43,15 @@ svg{
 }
 
 img{
-    width: 40%;
+    width: 42%;
 }
 
 
-@media screen and (min-width: 320px) and (max-width: 480px){
+@media screen and (max-width: 480px){
     padding-bottom: 50px;
     h2{
         padding-top: 0;
-        font-size: 2.7rem;
+        font-size: 2.2rem;
         text-align: left;
     }
 
@@ -60,12 +60,15 @@ img{
         max-width: 280px;
         text-align: left;
         /* padding: 40px 0; */
-        padding: 20px 0;
+        padding-top: 20px;
+        margin: 0;
         /* margin: 0 auto; */
     }
 
     img{
-        display: none;
+        display: block;
+        width: 100%;
+        padding-top: 16px;
     }
 
     svg{

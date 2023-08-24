@@ -6,6 +6,7 @@ import { FlexContainer } from '../styles/FlexContainer.styled'
 import bookmark from '../images/bookmark.svg'
 import { Link } from 'react-router-dom'
 import { BiMessageAdd } from 'react-icons/bi'
+import heroImg from '../../../public/hero-img.svg'
 
 const Hero = () => {
     return (
@@ -15,14 +16,14 @@ const Hero = () => {
                     <div>
                         <h2>Take quick notes,<br />write down your thoughts.</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <Link to={'/login'}><HeroButton bg={"#001524"} color={"#FFF"}>Get Started
+                        <Link to={'/login'}><HeroButton bg={"#001524"} color={"#FFF"} hover={'#01233B'}>Get Started
                         </HeroButton>
                         </Link>
 
                     </div>
 
                     {/* <div className='box'></div> */}
-                    <img src={bookmark} alt="" />
+                    <img src={heroImg} alt="lady taking a note, illustration on quiknote" />
                 </FlexContainer>
             </Container>
 

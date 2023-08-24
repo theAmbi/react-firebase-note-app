@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const PerksStyled = styled.section`
 width: 100%;
 background: #001524;
-min-height: 100vh;
+min-height: 70vh;
 padding: 40px 0;
 display: flex;
 flex-direction: column;
@@ -31,7 +31,7 @@ p{
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     h2{
         padding-top: 0;
-        font-size: 2.7rem;
+        font-size: 2.2rem;
         text-align: left;
     }
 

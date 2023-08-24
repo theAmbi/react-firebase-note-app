@@ -8,7 +8,7 @@ const Perks = () => {
         <>
             <PerksStyled  >
                 <Container>
-                    <h2>What makes us <br /> different.</h2>
+                    <h2>What makes us different.</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <HeroButton color='#001524'>Learn more</HeroButton>
                 </Container>

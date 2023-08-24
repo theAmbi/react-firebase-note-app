@@ -17,6 +17,10 @@ border: none;
 /* margin: start; */
 margin-top: 40px;
 
+&:hover{
+    background-color: ${({hover}) => hover};
+}
+
 
 @media screen and (max-width: 480px){
     font-size: 1rem;

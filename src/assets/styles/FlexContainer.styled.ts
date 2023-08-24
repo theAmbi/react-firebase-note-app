@@ -6,7 +6,7 @@ width: 100%;
 display: flex;
 /* flex-direction: column; */
 justify-content: space-between ;
-align-items: center;
+align-items: flex-end;
 
 @media screen and (max-width: 480px) {
     flex-direction: column;
