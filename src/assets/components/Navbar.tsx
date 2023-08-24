@@ -46,11 +46,13 @@ const Navbar: React.FC<ImageProps> = ({src, alt}) => {
                         </Link>
 
 
+                            
+                            {/* <NavLink to="/notes"><li>Notes</li></NavLink> */}
                         <ul className={"navlink"}>
                             <NavLink to="/" className={"mobileHide"}><li>Home</li></NavLink>
-                            {/* <NavLink to="/notes"><li>Notes</li></NavLink> */}
                             <NavLink to="/docs" className={"mobileHide"}><li>Docs</li></NavLink>
-                            <NavLink to="/contact" className={"mobileHide"}><li>Contact</li></NavLink>
+                        <NavLink to="/dashboard" className={"mobileHide"}><li>Dashboard</li></NavLink>
+                            {/* <NavLink to="/contact" className={"mobileHide"}><li>Contact</li></NavLink> */}
                             <div className='user-btn-hamburger' onClick={() => showUserOptions}>
                                 {!user && <NavLink to="/login" className={"mobileHide"}>
                                     <Signin />

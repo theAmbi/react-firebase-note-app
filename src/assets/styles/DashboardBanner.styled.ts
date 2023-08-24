@@ -38,13 +38,13 @@ p{
     width: 100%;
 
     h2{
-        font-size: 2rem;
-        padding-top: 4rem;
+        font-size: 1.6rem;
+        padding-top: 3rem;
     }
 
     p{
-        font-size: 1.3rem;
-        margin-top: 15px;
+        font-size: .9rem;
+        margin-top: 8px;
     }
 }
 

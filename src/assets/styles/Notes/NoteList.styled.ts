@@ -225,7 +225,7 @@ h3{
     #heading-flex{
         padding: 20px 10px;
         h3{
-            font-size: 1.3rem;
+            font-size: 1.1rem;
         }
     }
 
@@ -233,7 +233,7 @@ h3{
         padding: 20px 9px;
 
         input{
-            max-width: 150px;
+            max-width: 100px;
         }
 
         .notelist-search{

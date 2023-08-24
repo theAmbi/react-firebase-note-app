@@ -6,6 +6,20 @@
     font-family: 'Inter', sans-serif;
 }
 
+:root{
+    ::-webkit-scrollbar{
+        width: 3px;
+    };
+    
+    ::-webkit-scrollbar-thumb{
+        background-color: var(--mainRed);
+    };
+    
+    ::-webkit-scrollbar-track {
+    background-color: var(--gray);
+    }
+}
+
 /* .dark{
     background-color: #000;
 } */

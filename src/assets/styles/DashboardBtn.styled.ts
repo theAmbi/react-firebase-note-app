@@ -19,6 +19,8 @@ margin-top: 40px;
 
 
 @media screen and (min-width: 320px) and (max-width: 480px){
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    padding: 17px 15px;
+    margin-top: 17px;
 }
 `

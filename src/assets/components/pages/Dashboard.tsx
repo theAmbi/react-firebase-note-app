@@ -23,23 +23,12 @@ const Dashboard = () => {
 
     const [user, loading] = useAuthState(auth);
     const [openModal, setOpenModal] = useState(false)
-    const [showNoteAddedNotif, setShowNoteAddedNotif] = useState(false);
 
     const navigate = useNavigate();
 
     const signUserOut = () => {
         signOut(auth);
     };
-
-    const handleNoteAdded = () => {
-        setShowNoteAddedNotif(true);
-        
-        useEffect(() => {
-            setTimeout(() => {
-                setShowNoteAddedNotif(false);
-            }, 3000);
-        }, [])
-    }
 
     // check for user and reroute to login
     useEffect(() => {

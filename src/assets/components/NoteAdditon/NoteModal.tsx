@@ -86,7 +86,7 @@ const NoteModal: React.FC<NoteModalProps> = ({note, onClose}) => {
            
             <div id='wrapper'>
             <div className="top-bar">
-            <h2>Edit note 📝</h2>
+            <h2>Edit note </h2>
             {/* <AiOutlineDelete/> */}
             </div>
             <div id='inputs'>

@@ -96,10 +96,11 @@ align-self: flex-start;
         border: 1px solid red;
     }
 
-    #user-img{
-        width: 30px !important;
-        height: 30px !important;
+
+    .hamburger{
+        display: block;
     }
+    
 
     
 }

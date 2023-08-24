@@ -38,7 +38,7 @@ gap: 25px;
     }
 
     &:focus{
-        border-bottom: 2px solid var(--grayishBlue);
+        border-bottom: 2px solid var(--gray);
         background-color: transparent;
         border-radius: 0px;
     }
@@ -101,21 +101,50 @@ gap: 25px;
 }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 480px){
-    width: 70%;
-    padding: 32px 30px;
+@media only screen and (max-width: 480px){
+    width: 100%;
+    border-radius: 2px;
+    padding: 32px 16px;
+    scrollbar-width: 3px;
 
     #inputs{
+        width: 96%;
+        /* border: 1px solid red; */
         input{
-            width: 90%;
+            width: 95%;
+            font-size: 1rem;
+            background-color: transparent;
+
         }
+    }
+
+    .top-bar {
+        padding-bottom: 10px;
+        h2{
+            font-size: 1.3rem;
+        }
+    }
+
+    .ql-editor{
+        height: 120px !important;
+        ::-webkit-scrollbar{
+            width: 3px;
+        };
+
+        ::-webkit-scrollbar-thumb{
+            background-color: var(--mainRed);
+        };
+
+        ::-webkit-scrollbar-track {
+        background-color: var(--gray);
+}
     }
 
     #btn{
         flex-direction: row;
-button{
-    padding: 18px 20px;
-    font-size: 0.8rem !important;
+        button{
+            padding: 18px 13px !important;
+            font-size: 0.8rem !important;
 
 }
     }

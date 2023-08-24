@@ -9,6 +9,10 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 
+.hamburger{
+    display: none;
+}
+
 /* #darkToggle{
     cursor: pointer;
     padding: 4px 6px;
@@ -24,20 +28,33 @@ justify-content: space-between;
 }
 
 @media only screen and (max-width: 480px){
+
     max-width: 90%;
 
-    .logo-img{
-        width: 100%;
+    .logo img{
+        width: 50%;
     }
 
-    .navlink{
+    .mobileHide{
         display: none;
     }
 
-    .hamburger{
-        display: block;
+    #user-img{
+        width: 27px !important;
+        height: 27px !important;
     }
-    /* background-color: yellow !important; */
+
+    /* .navlink{
+        display: none;
+    } */
+
+    
+
+    .hamburger {
+        display: inline !important;
+        /* border: 2px solid red !important; */
+    }
+    
 
     
 }
