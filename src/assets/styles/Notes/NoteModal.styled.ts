@@ -6,8 +6,11 @@ export const NoteModalWrap = styled.article`
    min-height: 450px;
    margin: 0 auto;
    background-color: var(--white);
-   border-radius: 20px;
+   border-radius: 10px;
    padding: 30px 50px;
+   overflow-x: hidden !important;
+   /* scrollbar-width: thin; */
+
 
 
 .top-bar{
@@ -102,10 +105,10 @@ gap: 25px;
 }
 
 @media only screen and (max-width: 480px){
-    width: 100%;
+    width: 90%;
     border-radius: 2px;
     padding: 32px 16px;
-    scrollbar-width: 3px;
+
 
     #inputs{
         width: 96%;
@@ -114,6 +117,7 @@ gap: 25px;
             width: 95%;
             font-size: 1rem;
             background-color: transparent;
+            padding: 25px 0px;
 
         }
     }
@@ -127,17 +131,7 @@ gap: 25px;
 
     .ql-editor{
         height: 120px !important;
-        ::-webkit-scrollbar{
-            width: 3px;
-        };
-
-        ::-webkit-scrollbar-thumb{
-            background-color: var(--mainRed);
-        };
-
-        ::-webkit-scrollbar-track {
-        background-color: var(--gray);
-}
+        s
     }
 
     #btn{

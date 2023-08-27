@@ -81,7 +81,7 @@ align-self: flex-start;
 
 
 
-@media only screen (min-width: 320px) and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
     width: 100%;
     /* flex-direction: column;
     justify-content: start; */
@@ -109,7 +109,7 @@ align-self: flex-start;
 
 @media screen and (min-width: 481px) and (max-width: 1000px) {
     .hamburger{
-        display: block;
+        display: block !important;
     }
 
     .navlink{

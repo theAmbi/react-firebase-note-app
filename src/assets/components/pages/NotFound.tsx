@@ -16,7 +16,7 @@ const NotFound = () => {
                     <h2>Page not found.</h2>
                     <p>Seems like you might have clicked a broken link</p>
                     <Link to={"/"}>
-                        <HeroButton>Go back to homepage</HeroButton>
+                        <HeroButton bg={'#f6f7fb'}>Go back to homepage</HeroButton>
                     </Link >
 
                 </FlexCol>

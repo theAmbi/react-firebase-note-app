@@ -7,6 +7,7 @@ import Docs from "./assets/components/pages/Docs";
 import Contact from "./assets/components/pages/Contact";
 import NotFound from "./assets/components/pages/NotFound";
 import Login from "./assets/components/pages/Login";
+import PrivacyPolicy from "./assets/components/pages/PrivacyPolicy";
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/login' element={<Login />} />
         <Route path="*" element={<NotFound />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
       </Routes>
   
     </div>

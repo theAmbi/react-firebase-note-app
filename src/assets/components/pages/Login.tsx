@@ -16,7 +16,7 @@ const Login:React.FC = () => {
 
     const [user, loading] = useAuthState(auth);
     const googleProvider = new GoogleAuthProvider();
-    // const fbProvider = new FacebookAuthProvider();
+    const fbProvider = new FacebookAuthProvider();
     const navigate = useNavigate();
 
     const navigateToDashboard = () => {
@@ -34,21 +34,21 @@ const Login:React.FC = () => {
         }
     }
 
-    // const handleFbSubmit = () => {
-    //     signInWithPopup(auth, fbProvider)
-    //         .then((response) => {
-    //             response.user;
-    //             const credential = fbProvider.credentialFromResult(response);
-    //             const accessToken = credential.accessToken;
-    //             console.log(accessToken);
+    const handleFbSubmit = () => {
+        signInWithPopup(auth, fbProvider)
+            .then((response) => {
+                response.user;
+                const credential = FacebookAuthProvider.credentialFromResult(response);
+                const accessToken = credential?.accessToken;
+                console.log(accessToken);
 
-    //         })
-    //         .catch((err) => {
-    //             alert(err.message);
+            })
+            .catch((err) => {
+                alert(err.message);
 
-    //         })
-    //     redirectUser();
-    // };
+            })
+            navigateToDashboard();
+    };
 
 
     // console.log(user);
@@ -74,7 +74,7 @@ const Login:React.FC = () => {
                         <FcGoogle id='google' />
                         Sign in with Google
                     </SignInBtnStyled>
-                    <SignInBtnStyled color='#fff' >
+                    <SignInBtnStyled color='#fff' onClick={handleFbSubmit} >
                         <GrFacebook id='facebook' />
                         Sign in with Facebook
                     </SignInBtnStyled>

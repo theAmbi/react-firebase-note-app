@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import './colours/colours.css'
 
 export const NotFoundStyled = styled.section`
 width: 100%;
 height: 100vh;
-max-height: 100vh;
 background: #FFF;
 display: flex;
 align-items: center;
-overflow-y: hidden !important;
+overflow: hidden;
+/* border: 1px solid yellow; */
 
 h2{
     color: #001524;
@@ -19,9 +20,12 @@ h2{
     margin: 20px 0;
 }
 
+
+
 img{
     width: 30%;
     margin-bottom: 20px;
+    /* border: 1px solid red; */
 }
 
 p{

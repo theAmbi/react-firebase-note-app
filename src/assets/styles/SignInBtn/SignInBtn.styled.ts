@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import '../colours/colours.css'
 
 export const SignInBtnStyled = styled.button`
 padding: 20px 32px;
-background: transparent;
+background: var(--gray);
 color: ${(color)=> color};
 font-weight: 600;
 text-align: left;
@@ -10,12 +11,16 @@ font-size: 1.2rem;
 cursor: pointer;
 border-radius: 14px;
 outline: none;
-border: 2px solid lightgray;
+border: 2px solid var(--gray);
 display: flex;
 align-items: center;
 gap: 20px;
 margin: 20px 0;
 
+
+&:hover, :focus{
+    background-color: var(--white);
+}
 
 #google{
     font-size: 2.2rem;
