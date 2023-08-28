@@ -25,8 +25,8 @@ function App() {
         <Route path='/docs' element={<Docs />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy id={0} title={""} description={""}/>}/>
         <Route path="*" element={<NotFound />} />
-        <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
       </Routes>
   
     </div>
