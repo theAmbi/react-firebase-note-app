@@ -46,6 +46,11 @@ line-height: 27px;
         border: 2px dashed var(--gray);
         border-radius: 10px;
 
+        &:hover{
+            border:2px dashed var(--mainRed);
+            box-shadow: 0px 20px 80px var(--gray);
+        }
+
     
 h4{
 font-size: 1.7rem;

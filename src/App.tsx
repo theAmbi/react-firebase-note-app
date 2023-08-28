@@ -10,10 +10,14 @@ import Login from "./assets/components/pages/Login";
 import PrivacyPolicy from "./assets/components/pages/PrivacyPolicy";
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from "./assets/components/Footer";
+import {useLocation} from 'react-router-dom'
 
 
 
 function App() {
+  const location = useLocation();
+  const isDashboardRoute = location.pathname === '/dashboard';
 
   return (
     <div>
@@ -28,6 +32,7 @@ function App() {
         <Route path='/privacy-policy' element={<PrivacyPolicy id={0} title={""} description={""}/>}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
+      {!isDashboardRoute && <Footer/>}
   
     </div>
   )
