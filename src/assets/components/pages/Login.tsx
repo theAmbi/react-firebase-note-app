@@ -9,6 +9,7 @@ import { GoogleAuthProvider, signInWithPopup, signInWithRedirect, FacebookAuthPr
 import { auth } from '../../firebase/firebase.config'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Navigate, useNavigate } from 'react-router-dom'
+import {toast} from 'react-toastify'
 import Preloader from '../utils/Preloader'
 
 
@@ -40,14 +41,18 @@ const Login:React.FC = () => {
                 response.user;
                 const credential = FacebookAuthProvider.credentialFromResult(response);
                 const accessToken = credential?.accessToken;
-                console.log(accessToken);
+                // console.log(accessToken);
+            navigateToDashboard();
+
 
             })
             .catch((err) => {
-                alert(err.message);
+                // alert(err.message);
+                if (err.code === 'auth/account-exists-with-different-credential') {
+                    toast.error("An account with a different credential already exists")
+                }
 
             })
-            navigateToDashboard();
     };
 
 

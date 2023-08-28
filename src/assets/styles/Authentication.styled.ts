@@ -4,12 +4,12 @@ import './colours/colours.css'
 export const AuthStyled = styled.section`
 width: 100%;
 min-height: 70vh;
-background: #D8315B;
+background: var(--white);
 padding-bottom: 30px;
 
 h2{
-    color: #FFFAFF;
-    font-size: 3.8rem;
+    color: var(--darkBlue);
+    font-size: 3.4rem;
     text-align: left;
     padding-top: 6rem;
     font-weight: 900;
@@ -27,7 +27,7 @@ h2{
     max-width: 300px;
     height: 350px;
     border-radius: 16px;
-    background-color: var(--white);
+    background-color: var(--gray);
 
     h4{
         font-size: 1.8rem;
