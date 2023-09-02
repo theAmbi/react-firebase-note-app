@@ -20,6 +20,8 @@ const NoteList = () => {
 
     const [myNotes, setMyNotes] = useState([]);
     const [searchNote, setSearchNote] = useState('');
+    const NOTES_PER_PAGE = 10;
+    const [currentPage, setCurrentPage] = useState(1);
 
 const collectionRef = collection(database, `notes/${user?.uid}/mynotes`);
 const fetchNotes = useCallback(async () => {
@@ -52,6 +54,16 @@ const sortedNotes = [...myNotes].sort((a:Note, b:Note) => {
     bTimestamp - aTimestamp;
 });
 
+const startIndex = (currentPage - 1) * NOTES_PER_PAGE;
+const endIndex = startIndex + NOTES_PER_PAGE;
+const notesToDisplay = sortedNotes.slice(startIndex, endIndex);
+
+const totalPages = Math.ceil(sortedNotes.length / NOTES_PER_PAGE);
+
+const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+};
+
     return (
         <NoteListStyled>
             <div id='heading-flex'>
@@ -67,16 +79,34 @@ const sortedNotes = [...myNotes].sort((a:Note, b:Note) => {
             </div>
 
             <div className="list">
-                {sortedNotes.length > 0 ? 
+                {/* {sortedNotes.length > 0 ? 
                     sortedNotes.map((note: any) => {
                     return <SingleNote note={note} key={note.id} />
                 })   
              : (<div className='note-error'><TbFaceIdError id='errorIcon'/> <p>Oops, looks like we couldn't find your note.</p></div>)}
-            {!myNotes ? <div>No note found</div> : '' }
+            {!myNotes ? <div>No note found</div> : '' } */}
+            {notesToDisplay.length > 0 ? (
+                notesToDisplay.map((note: any) => {
+                    return <SingleNote note={note} key={note.id}/>;
+                })
+            ): (
+                <div className='note-error'>
+                    <TbFaceIdError id='errorIcon'/>
+                    <p>Oops...looks like we couldn't find your note.</p>
+                </div>
+            )}
+
+            {!myNotes ? <div>No note found</div> : ''}
+            </div>
+
+            <div className='pagination-controls'>
+                <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} id='previous'>Previous</button>
+                <span>Page {currentPage} of {totalPages}</span>
+                <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages} id='next'>Next</button>
+            </div>
 
                 
-
-            </div>
+            {/* </div> */}
 
         </NoteListStyled>
     )

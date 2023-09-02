@@ -9,9 +9,9 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 
-.hamburger{
+/* .hamburger{
     display: none;
-}
+} */
 
 /* #darkToggle{
     cursor: pointer;
@@ -30,6 +30,9 @@ justify-content: space-between;
 @media only screen and (max-width: 480px){
 
     max-width: 90%;
+    .hamburger{
+        display: block !important;
+    }
 
     .logo img{
         width: 50%;
@@ -39,7 +42,7 @@ justify-content: space-between;
         display: none;
     }
 
-    #user-img{
+    #user-img img{
         width: 27px !important;
         height: 27px !important;
     }

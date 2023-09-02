@@ -3,12 +3,16 @@ import { NavbarStyle } from '../styles/Navbar.styled'
 import { NavContainer } from '../styles/NavContainer.styled'
 import { OuterNavContainer } from '../styles/OuterNavContainer.styled'
 import { MobileMenu } from '../styles/MobileMenu.styled'
+import { Container } from '../styles/Container.styled'
 import { Link, NavLink } from 'react-router-dom'
 import logo from "../images/logo.png"
 import Signin from './Signin'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth } from '../firebase/firebase.config'
 import hamburger from '../images/hambergermenu.svg'
+import {AiOutlineHome} from 'react-icons/ai'
+import {SlDocs} from 'react-icons/sl'
+import {MdOutlineDashboardCustomize} from 'react-icons/md'
 // import night from '../images/icons/night.svg';
 // import day from '../images/icons/day.svg';
 
@@ -76,14 +80,25 @@ const Navbar: React.FC<ImageProps> = ({src, alt}) => {
                     </NavContainer>
                 </NavbarStyle>
                 {toggle && <MobileMenu id='mobile-menu'>
-                    {/* <div className='mobile-menu-container'> */}
-                        <NavLink to={'/'}>Home</NavLink>
-                        <NavLink to={'/docs'}>Docs</NavLink>
-                        <NavLink to={'/contact'}>Contact</NavLink>
+                   <Container>
+                     {/* <div className='mobile-menu-container'> */}
+                     <NavLink to={'/'} className={'navlink-flex'}>
+                        <AiOutlineHome className='mobile-nav-icon'/>
+                        Home
+                        </NavLink>
+                        <NavLink to={'/docs'} className={'navlink-flex'}>
+                        <SlDocs className='mobile-nav-icon'/>
+                        Docs
+                        </NavLink>
+                        <NavLink to={'/dashboard'} className={'navlink-flex'}>
+                            <MdOutlineDashboardCustomize className='mobile-nav-icon'/>
+                            Dashboard
+                            </NavLink>
                         {!user && <NavLink to="/login" id='login'>
                                     <Signin />
                                 </NavLink>}
                     {/* </div> */}
+                   </Container>
                 </MobileMenu>}
 
             </OuterNavContainer>

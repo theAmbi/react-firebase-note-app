@@ -41,6 +41,7 @@ const Login:React.FC = () => {
                 response.user;
                 const credential = FacebookAuthProvider.credentialFromResult(response);
                 const accessToken = credential?.accessToken;
+                toast.success("Login successful!", {autoClose: 2000})
                 // console.log(accessToken);
             navigateToDashboard();
 

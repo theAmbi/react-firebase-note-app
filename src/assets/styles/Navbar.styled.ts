@@ -22,7 +22,6 @@ align-self: flex-start;
 
 
 
-
 #user-img{
     width: 40px !important;
     height: 40px;
@@ -72,9 +71,11 @@ align-self: flex-start;
 
 }
 
-.nav-border{
-    background-color: yellow;
+.hamburger{
+    display: none;
 }
+
+
 
 
 
@@ -91,15 +92,15 @@ align-self: flex-start;
         display: none;
     }
 
-    .navlink{
+    /* .navlink{
         display: none !important;
         border: 1px solid red;
-    }
+    } */
 
 
-    .hamburger{
-        display: block;
-    }
+    /* .user-btn-hamburger{
+        display: flex !important;
+    } */
     
 
     
@@ -108,13 +109,17 @@ align-self: flex-start;
 
 
 @media screen and (min-width: 481px) and (max-width: 1000px) {
-    .hamburger{
-        display: block !important;
+
+    .mobileHide{
+        display: none;
     }
 
+    .hamburger{
+        display: block;
+    }
     .navlink{
-        display: none;
-        border: 1px solid yellow;
+        /* display: none; */
+        /* border: 1px solid yellow; */
     }
 
    

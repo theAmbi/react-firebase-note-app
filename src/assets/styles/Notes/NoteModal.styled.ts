@@ -131,7 +131,7 @@ gap: 25px;
 
     .ql-editor{
         height: 120px !important;
-        s
+        
     }
 
     #btn{
@@ -142,5 +142,9 @@ gap: 25px;
 
 }
     }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1000px){
+    width: 60%;
 }
 `

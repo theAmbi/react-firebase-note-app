@@ -4,6 +4,31 @@ import '../colours/colours.css'
 export const NoteListStyled = styled.section`
 margin: 50px 0;
 
+.pagination-controls{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#previous, #next{
+    padding: 14px 26px;
+    background-color: var(--white);
+    color: var(--grayishBlue);
+    /* font-weight: 600; */
+    text-align: left;
+    font-size: .9rem;
+    cursor: pointer;
+    border-radius: 14px;
+    position: relative;
+    outline: none;
+    border: none;
+
+    :disabled{
+        opacity: .5;
+    }
+}
+
 #heading-flex{
     display: flex;
     justify-content: space-between;
@@ -222,6 +247,14 @@ h3{
     /* border: 1px solid red; */
     overflow: hidden;
 
+    .pagination-controls{
+        gap: 10px;
+
+        #previous, #next{
+            padding: 14px 19px !important;
+        }
+    }
+
     #heading-flex{
         padding: 20px 10px;
         h3{
@@ -239,6 +272,8 @@ h3{
         .notelist-search{
         order: 0;
     }
+
+    
     }
 
    

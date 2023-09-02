@@ -3,13 +3,16 @@ import './colours/colours.css';
 
 
 export const MobileMenu = styled.article`
-width: 100%;
+width: 80%;
 height: fit-content;
 background-color: var(--white);
-padding: 40px 20px;
+padding: 22px 0px;
 display: flex;
 flex-direction: column;
+/* border: 1px solid red; */
+overflow: hidden;
 gap: 20px;
+/* background-color: yellow; */
 
 a{
     color: var(--grayishBlue) !important;
@@ -21,6 +24,21 @@ a{
     padding-top: 20px;
     border-top: 1px solid var(--gray);
  }   
+
+ .navlink-flex{
+    display: flex;
+    padding: 16px 0px;
+    align-items: center;
+    gap: 14px;
+
+
+    .mobile-nav-icon{
+        padding: 10px;
+        background-color: var(--gray);
+        border-radius: 6px;
+        font-size: 18px;
+    }
+ }
 
 
 
