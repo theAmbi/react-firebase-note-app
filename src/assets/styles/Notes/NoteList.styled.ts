@@ -12,7 +12,7 @@ margin: 50px 0;
 }
 
 #previous, #next{
-    padding: 14px 26px;
+    padding: 14px 20px;
     background-color: var(--white);
     color: var(--grayishBlue);
     /* font-weight: 600; */

@@ -20,6 +20,11 @@ a{
     text-decoration: none !important;
     }
 
+    .active{
+        color: var(--mainRed) !important;
+        font-weight: 700;
+}
+
  #login{
     padding-top: 20px;
     border-top: 1px solid var(--gray);
