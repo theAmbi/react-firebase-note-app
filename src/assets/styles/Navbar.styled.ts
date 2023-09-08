@@ -4,19 +4,21 @@ import "./colours/colours.css";
 export const NavbarStyle = styled.nav`
   width: 100%;
   height: fit-content;
-  /* position: fixed; */
+  /* position: sticky !important; */
+  /* top: 20px !important; */
+  z-index: 99;
 
   /* z-index: 999; */
   background-color: var(--white);
   padding: 30px 0px;
-  overflow: hidden !important;
+  /* overflow: hidden !important; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   align-self: flex-start;
 
   #close {
-    width: 20px;
+    width: 18px;
     color: var(--grayishBlue);
   }
 

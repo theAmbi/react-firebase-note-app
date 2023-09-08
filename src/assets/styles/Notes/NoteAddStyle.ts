@@ -1,14 +1,15 @@
 import styled from "styled-components";
-import '../colours/colours.css'
+import "../colours/colours.css";
 
 export const NoteAddStyle = styled.div`
-width: 100%;
-margin: 60px 0;
-background-color: #fff;
-border: 1px solid lightgray;
-position: relative;
+  width: 100%;
+  margin: 60px 0;
+  background-color: #fff;
+  /* border: 1px solid lightgray; */
+  position: relative;
+  border-radius: 10px;
 
-.note-add-wrapper{
+  .note-add-wrapper {
     width: 100%;
     height: 100%;
     display: flex;
@@ -17,53 +18,51 @@ position: relative;
     position: relative;
     /* background-color: yellow; */
 
-
-    .cancel{
-        padding: 10px;
-        background-color: var(--darkBlue);
-        position: absolute;
-        top: 0;
-        right: 0;
-        border-bottom-left-radius: 30px;
-        /* border-top-right-radius: 12px; */
-        cursor: pointer;
+    .cancel {
+      padding: 10px;
+      background-color: var(--darkBlue);
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-bottom-left-radius: 30px;
+      border-top-right-radius: 10px;
+      cursor: pointer;
     }
-}
+  }
 
-.note-container{
+  .note-container {
     /* background-color: pink; */
-width: 100%;
+    width: 100%;
     height: fit-content;
     /* background-color: yellow; */
     padding: 20px 30px;
     position: relative;
-}
+  }
 
-.note-title input {
+  .note-title input {
     border: none;
     padding: 12px 10px;
     font-size: 2rem;
     outline: none !important;
     font-weight: 600;
-    color: #D8317B;
+    color: #d8317b;
     margin: 20px 0;
-/* border-top-left-radius: 12px;
+    /* border-top-left-radius: 12px;
 border-top-right-radius: 12px; */
     background: transparent;
     /* background: yellow; */
     /* opacity: .5; */
 
-    ::placeholder{
-        color: gray;
+    ::placeholder {
+      color: gray;
     }
 
-    &:focus{
-        background-color: #fff;
+    &:focus {
+      background-color: #fff;
     }
+  }
 
-}
-
-.note-description textarea{
+  .note-description textarea {
     /* border: none; */
     color: #577399 !important;
     /* border: 1px solid lightgray;  */
@@ -79,26 +78,27 @@ border-top-right-radius: 12px; */
     background: #f6f7fb;
     resize: none;
     line-height: 27px;
-    
 
-    &::placeholder{
-        font-style: italic;
-        color: lightgray;
+    &::placeholder {
+      font-style: italic;
+      color: lightgray;
     }
 
-    &:focus{
-        /* border: 2px solid #577399; */
-        background-color: #fff;
+    &:focus {
+      /* border: 2px solid #577399; */
+      background-color: #fff;
     }
-}
+  }
 
-.ql-editor {
-  color: #577399;
-  height: 200px;
-  font-size: 1.3rem;
-}
+  .ql-editor {
+    color: #577399;
+    height: 200px;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+  }
 
-/* .background{
+  /* .background{
      width: 100%;
     background-color: rgba(0, 21, 36, .4);
     position: fixed;    
@@ -108,23 +108,23 @@ border-top-right-radius: 12px; */
     -webkit-backdrop-filter: blur(7px);
     } */
 
-    @media only screen and (max-width: 480px){
-        width: 100%;
-        margin: 30px 0;
-        /* border: 1px solid red !important; */
-        /* overflow: hidden; */
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+    margin: 30px 0;
+    /* border: 1px solid red !important; */
+    /* overflow: hidden; */
 
-        .note-add-wrapper{
-            width: 90%;
-        }
-
-        .note-title input{
-            max-width: 90%;
-            font-size: 1.2rem;
-        }
-
-        .note-container{
-            padding: 15px 20px;
-        }
+    .note-add-wrapper {
+      width: 90%;
     }
-`
+
+    .note-title input {
+      max-width: 90%;
+      font-size: 1.2rem;
+    }
+
+    .note-container {
+      padding: 15px 20px;
+    }
+  }
+`;

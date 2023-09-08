@@ -166,6 +166,14 @@ export const FooterStyled = styled.footer`
         flex-direction: column;
         gap: 35px;
 
+        .menu-flex {
+          margin-top: 70px;
+        }
+
+        .bottom-menu {
+          padding-bottom: 40px;
+        }
+
         .menu {
           h6 {
             font-size: 1.1rem;

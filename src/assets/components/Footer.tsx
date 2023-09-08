@@ -74,7 +74,7 @@ const Footer = () => {
                 </div>
                 {/* <div className="border" /> */}
                 {/* <img src={border} /> */}
-                <p className='attribute'>&copy; 2023, Made with <span className='attr-heart'><AiTwotoneHeart /></span>by Golden Ekpendu</p>
+                <p className='attribute'>&copy; 2023,<span className='attr-heart'></span>by Golden Ekpendu</p>
             </Container>
         </FooterStyled>
     )
