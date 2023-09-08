@@ -2,6 +2,7 @@ import React from 'react'
 import { PerksStyled } from '../styles/Perks.styled'
 import { Container } from '../styles/Container.styled'
 import { HeroButton } from '../styles/HeroButton.styled'
+import { Link } from 'react-router-dom'
 
 const Perks = () => {
     return (
@@ -10,7 +11,9 @@ const Perks = () => {
                 <Container>
                     <h2>What makes us different.</h2>
                     <p>Experience a note-taking platform that adapts to your needs, whether it's sharing ideas with ease or bringing your thoughts to life with innovative tools. Embrace the difference with QuikNote.</p>
-                    <HeroButton color='#001524'>Learn more</HeroButton>
+                    <Link to={'/docs'}>
+                        <HeroButton color='#001524'>Learn more</HeroButton>
+                    </Link>
                 </Container>
 
             </PerksStyled>
