@@ -3,13 +3,13 @@ import React from "react";
 interface CardProps {
     title: string,
     desc: string,
-    img: HTMLImageElement,
+    img?: HTMLImageElement,
 }
 
-const Card: React.FC<CardProps> = ({title, img, desc}) => {
+const Card: React.FC<CardProps> = ({ title, desc }) => {
     return (
         <div id="card">
-            <img src={img} />
+            {/* <img src={img} /> */}
             <h4>{title}</h4>
             <p>{desc}</p>
         </div>

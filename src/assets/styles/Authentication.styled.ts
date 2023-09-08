@@ -62,7 +62,7 @@ export const AuthStyled = styled.section`
     }
 
     /* .image {
-      display: none;
+      width: 100%;
     } */
 
     /* #card:hover {

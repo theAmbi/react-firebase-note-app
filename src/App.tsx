@@ -8,10 +8,10 @@ import Contact from "./assets/components/pages/Contact";
 import NotFound from "./assets/components/pages/NotFound";
 import Login from "./assets/components/pages/Login";
 import PrivacyPolicy from "./assets/components/pages/PrivacyPolicy";
-import {ToastContainer} from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from "./assets/components/Footer";
-import {useLocation} from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 
 
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div>
-      <ToastContainer/>
+      <ToastContainer />
       <Navbar />
       <Routes>
         <Route index path='/' element={<Home />} />
@@ -29,11 +29,11 @@ function App() {
         <Route path='/docs' element={<Docs />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/privacy-policy' element={<PrivacyPolicy id={0} title={""} description={""}/>}/>
+        <Route path='/privacy-policy' element={<PrivacyPolicy id={0} title={""} description={""} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      {!isDashboardRoute && <Footer/>}
-  
+      {!isDashboardRoute && <Footer />}
+
     </div>
   )
 }

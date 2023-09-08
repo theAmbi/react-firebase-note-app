@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { AiOutlineGithub, AiFillBehanceSquare, AiOutlineTwitter, AiTwotoneHeart } from 'react-icons/ai'
 import { BsLinkedin } from 'react-icons/bs';
 import baseLogo from '../../../public/fbase.svg'
-import border from '../../../public/border.svg'
+// import border from '../../../public/border.svg'
 
 
 const Footer = () => {
@@ -15,7 +15,7 @@ const Footer = () => {
             <Container>
                 <div className='footer-flex'>
                     <div className="one">
-                        <img src={whiteLogo} alt="quiknote-logo" />
+                        <img src={whiteLogo} alt="quiknote-logo" className='footer-logo' />
                         <p>Note down your thoughts today. You never know when that idea comes at home... <span id='italics'>FAST</span>.</p>
 
                         <div className="powered-by">
@@ -73,7 +73,7 @@ const Footer = () => {
 
                 </div>
                 {/* <div className="border" /> */}
-                <img src={border} />
+                {/* <img src={border} /> */}
                 <p className='attribute'>&copy; 2023, Made with <span className='attr-heart'><AiTwotoneHeart /></span>by Golden Ekpendu</p>
             </Container>
         </FooterStyled>

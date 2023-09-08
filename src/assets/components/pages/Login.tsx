@@ -4,16 +4,16 @@ import { LoginStyled } from '../../styles/Login.styled'
 import { SignInBtnStyled } from '../../styles/SignInBtn/SignInBtn.styled'
 import { FcGoogle } from 'react-icons/fc'
 import { GrFacebook } from 'react-icons/gr'
-import {UserCredential} from 'firebase/auth'
+import { UserCredential } from 'firebase/auth'
 import { GoogleAuthProvider, signInWithPopup, signInWithRedirect, FacebookAuthProvider } from 'firebase/auth'
 import { auth } from '../../firebase/firebase.config'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Navigate, useNavigate } from 'react-router-dom'
-import {toast} from 'react-toastify'
+import { toast } from 'react-toastify'
 import Preloader from '../utils/Preloader'
 
 
-const Login:React.FC = () => {
+const Login: React.FC = () => {
 
     const [user, loading] = useAuthState(auth);
     const googleProvider = new GoogleAuthProvider();
@@ -41,9 +41,9 @@ const Login:React.FC = () => {
                 response.user;
                 const credential = FacebookAuthProvider.credentialFromResult(response);
                 const accessToken = credential?.accessToken;
-                toast.success("Login successful!", {autoClose: 2000})
+                toast.success("Login successful!", { autoClose: 2000 })
                 // console.log(accessToken);
-            navigateToDashboard();
+                navigateToDashboard();
 
 
             })
@@ -74,7 +74,7 @@ const Login:React.FC = () => {
             {/* {loading && <Preloader />} */}
             <Container>
                 <h2>Welcome.</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <p>Log in to access your notes and start your journey to organized productivity. </p>
                 <div className='btn-wrap'>
                     <SignInBtnStyled color={"#001524"} onClick={handleGoogleSubmit}>
                         <FcGoogle id='google' />

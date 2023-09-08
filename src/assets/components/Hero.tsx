@@ -15,7 +15,7 @@ const Hero = () => {
                 <FlexContainer>
                     <div>
                         <h2>Take quick notes,<br />write down your thoughts.</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p> Whether you're jotting down notes, sketching out plans, or crafting your next masterpiece, QuikNote is your trusted companion on your journey of organization and inspiration.</p>
                         <Link to={'/login'}><HeroButton bg={"#001524"} color={"#FFF"} hover={'#01233B'}>Get Started
                         </HeroButton>
                         </Link>

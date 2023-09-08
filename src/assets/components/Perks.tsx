@@ -9,7 +9,7 @@ const Perks = () => {
             <PerksStyled  >
                 <Container>
                     <h2>What makes us different.</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Experience a note-taking platform that adapts to your needs, whether it's sharing ideas with ease or bringing your thoughts to life with innovative tools. Embrace the difference with QuikNote.</p>
                     <HeroButton color='#001524'>Learn more</HeroButton>
                 </Container>
 
