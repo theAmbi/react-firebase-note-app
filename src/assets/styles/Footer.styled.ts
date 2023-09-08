@@ -136,6 +136,10 @@ export const FooterStyled = styled.footer`
         }
       }
     }
+
+    .bottom-menu {
+      margin-top: 30px;
+    }
   }
 
   @media screen and (max-width: 480px) {
@@ -186,6 +190,13 @@ export const FooterStyled = styled.footer`
         font-size: 1rem;
         max-width: 100%;
       }
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 1000px) {
+    .footer-flex {
+      flex-direction: column;
+      gap: 100px;
     }
   }
 `;

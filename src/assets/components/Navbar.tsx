@@ -11,6 +11,7 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth } from '../firebase/firebase.config'
 import hamburger from '../images/hambergermenu.svg'
 import { AiOutlineHome } from 'react-icons/ai'
+import close from '/close.svg'
 import { SlDocs } from 'react-icons/sl'
 import { MdOutlineDashboardCustomize } from 'react-icons/md'
 // import night from '../images/icons/night.svg';
@@ -64,8 +65,7 @@ const Navbar: React.FC<ImageProps> = ({ src, alt }) => {
                                     <img src={user?.photoURL} alt="user-img" id='user-img' />
                                 </Link>}
 
-
-                                <img src={hamburger} alt="hamburger" className='hamburger' onClick={() => setToggle(!toggle)} />
+                                {!toggle ? <img src={hamburger} alt="hamburger" className='hamburger' onClick={() => setToggle(!toggle)} /> : <img src={close} id='close' onClick={() => setToggle(!toggle)} />}
 
 
                             </div>

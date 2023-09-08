@@ -36,7 +36,7 @@ const Footer = () => {
                                 </div>
                             </div>
 
-                            <div className='menu'>
+                            <div className='menu bottom-menu'>
                                 <h6>View our privacy policy</h6>
                                 <div className="links">
                                     <Link to={'/privacy-policy'}>Privacy policy</Link>

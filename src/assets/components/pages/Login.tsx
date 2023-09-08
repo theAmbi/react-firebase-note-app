@@ -76,11 +76,11 @@ const Login: React.FC = () => {
                 <h2>Welcome.</h2>
                 <p>Log in to access your notes and start your journey to organized productivity. </p>
                 <div className='btn-wrap'>
-                    <SignInBtnStyled color={"#001524"} onClick={handleGoogleSubmit}>
+                    <SignInBtnStyled onClick={handleGoogleSubmit}>
                         <FcGoogle id='google' />
                         Sign in with Google
                     </SignInBtnStyled>
-                    <SignInBtnStyled color='#fff' onClick={handleFbSubmit} >
+                    <SignInBtnStyled onClick={handleFbSubmit} >
                         <GrFacebook id='facebook' />
                         Sign in with Facebook
                     </SignInBtnStyled>

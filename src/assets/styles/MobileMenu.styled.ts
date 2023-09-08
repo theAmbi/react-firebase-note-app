@@ -40,7 +40,7 @@ export const MobileMenu = styled.article`
       background-color: var(--gray);
       border-radius: 6px;
       font-size: 18px;
-      color: var(--darkBlue);
+      color: var(--grayishBlue);
     }
   }
 
