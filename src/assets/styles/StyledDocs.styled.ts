@@ -85,4 +85,20 @@ export const StyledDocs = styled.div`
   .step:first-child {
     margin-top: 50px;
   }
+
+  @media screen and (max-width: 480px) {
+    .step {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 1000px) {
+    .step {
+      img {
+        width: 90%;
+      }
+    }
+  }
 `;

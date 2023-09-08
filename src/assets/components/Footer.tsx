@@ -5,7 +5,7 @@ import whiteLogo from '../../assets/images/logo_white.svg'
 import { Link } from 'react-router-dom';
 import { AiOutlineGithub, AiFillBehanceSquare, AiOutlineTwitter, AiTwotoneHeart } from 'react-icons/ai'
 import { BsLinkedin } from 'react-icons/bs';
-import baseLogo from '../../../public/fbase.svg'
+import baseLogo from '/fbase.svg'
 // import border from '../../../public/border.svg'
 
 

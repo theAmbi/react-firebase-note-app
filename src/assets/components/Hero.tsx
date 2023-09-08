@@ -6,7 +6,7 @@ import { FlexContainer } from '../styles/FlexContainer.styled'
 import bookmark from '../images/bookmark.svg'
 import { Link } from 'react-router-dom'
 import { BiMessageAdd } from 'react-icons/bi'
-import heroImg from '../../../public/hero-img.svg'
+import heroImg from '/hero-img.svg'
 
 const Hero = () => {
     return (
