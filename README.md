@@ -34,6 +34,12 @@ https://quiknote.vercel.app/
 - 📂 React Icons
 - 🖼 [undraw.com](https://undraw.co) for illustrations
 
+## Authors
+
+- [Twitter (X)](https://www.twitter.com/TheeAmbi)
+- [Linkedin](https://www.linkedin.com/in/golden-ekpendu-0b86491a4/)
+- [Behance](https://www.behance.net/goldenekpendu)
+
 ## Feedback
 
 If you have any feedback, please reach out to me at ekpendugolden19@gmail.com
