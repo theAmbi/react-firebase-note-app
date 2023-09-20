@@ -28,6 +28,12 @@ export const NoteAddStyle = styled.div`
       border-top-right-radius: 10px;
       cursor: pointer;
     }
+
+    #word-count-2 {
+      margin: 15px 0px;
+      font-size: 1rem;
+      color: var(--grayishBlue);
+    }
   }
 
   .note-container {

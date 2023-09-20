@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import '../styles/colours/colours.css'
+import "../styles/colours/colours.css";
 
 export const DashboardStyled = styled.section`
   width: 100%;
@@ -23,8 +23,14 @@ export const DashboardStyled = styled.section`
     /* border: 2px solid lightgray; */
   }
 
+  #word-count {
+    font-size: 1rem;
+    color: var(--grayishBlue);
+    padding: 30px 0px;
+  }
+
   @media only screen and (min-width: 320px) and (max-width: 480px) {
-    #signout{
+    #signout {
       font-size: 0.9rem;
     }
   }
